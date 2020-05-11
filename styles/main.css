@@ -32,6 +32,52 @@
     .title {
       font-size: 36px; } }
 
+.logo {
+  display: block;
+  width: 115px; }
+  .logo img {
+    width: 100%; }
+  @media (max-width: 576px) {
+    .logo {
+      width: 73px; } }
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 85px; }
+
+.nav__link {
+  display: block;
+  padding: 8px 24px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
+  @media (min-width: 992px) {
+    .nav__link:hover {
+      color: #9fadc2; } }
+  .nav__link--active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px; }
+
+@media (max-width: 992px) {
+  .nav__list {
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .nav__list-item:not(:first-child) {
+    margin-top: 16px; }
+  .nav__link {
+    width: 100%;
+    font-size: 22px;
+    line-height: 1; }
+    .nav__link--active {
+      background-color: transparent; } }
+
 .paragraphs__subtitle {
   font-weight: bold;
   font-size: 24px;
@@ -138,7 +184,7 @@
       -webkit-transform: translateY(10%);
               transform: translateY(10%); }
 
-.header__tel, .header__call, .header__link {
+.nav__link, .header__tel, .header__call {
   font-weight: bold;
   font-size: 12px;
   color: #fff;
@@ -171,11 +217,6 @@
     display: none;
     width: 30px; }
     .header__tel-icon img {
-      width: 100%; }
-  .header__logo {
-    display: block;
-    width: 115px; }
-    .header__logo img {
       width: 100%; }
   .header__call {
     padding: 8px 24px;
@@ -230,25 +271,6 @@
       position: absolute;
       top: -16px;
       background-color: #fff; }
-  .header__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-top: 85px; }
-  .header__link {
-    display: block;
-    padding: 8px 24px;
-    -webkit-transition: color 0.3s;
-    transition: color 0.3s; }
-    @media (min-width: 992px) {
-      .header__link:hover {
-        color: #9fadc2; } }
-    .header__link--active {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 8px; }
   @media (max-width: 992px) {
     .header__tel {
       position: absolute;
@@ -298,26 +320,10 @@
       -webkit-transition: -webkit-transform 0.3s ease-out;
       transition: -webkit-transform 0.3s ease-out;
       transition: transform 0.3s ease-out;
-      transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
-    .header__list {
-      margin: 0;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-    .header__list-item:not(:first-child) {
-      margin-top: 16px; }
-    .header__link {
-      width: 100%;
-      font-size: 22px;
-      line-height: 1; }
-      .header__link--active {
-        background-color: transparent; } }
+      transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; } }
   @media (max-width: 576px) {
     .header__tel-icon {
       width: 18px; }
-    .header__logo {
-      width: 73px; }
     .header__burger {
       width: 18px;
       height: 12px; } }
@@ -417,19 +423,18 @@
     transition: box-shadow 0.3s;
     transition: box-shadow 0.3s, -webkit-box-shadow 0.3s; }
   .gallery__description {
-    font-weight: bold;
     font-size: 16px;
     line-height: 27px;
-    color: #0075ff;
+    color: #3e3e3e;
     margin-top: 24px; }
   .gallery__link {
-    font-weight: normal;
-    color: #3e3e3e;
+    font-weight: bold;
+    color: #0075ff;
     -webkit-transition: color 0.3s;
     transition: color 0.3s; }
     @media (min-width: 992px) {
       .gallery__link:hover {
-        color: #9fadc2; } }
+        color: #000; } }
   .gallery__button {
     display: block;
     width: 188px;
@@ -616,18 +621,10 @@
   padding: 243px 0 40px;
   background: url("../images/footer.jpg") center center/cover no-repeat; }
   .footer__logo {
-    display: block;
-    width: 115px;
-    height: 76px;
     margin: auto; }
-    .footer__logo img {
-      width: 100%; }
   @media (max-width: 992px) {
     .footer {
-      padding: 132px 0 24px; }
-      .footer__logo {
-        width: 77px;
-        height: 50px; } }
+      padding: 132px 0 24px; } }
 
 body {
   margin: 0; }
